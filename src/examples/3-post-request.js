@@ -1,22 +1,38 @@
-import { useState } from 'react';
-import axios from 'axios';
-const url = 'https://course-api.com/axios-tutorial-post';
+import { useState } from 'react'
+import axios from 'axios'
+
+const f = '⇒ 3-post-request.js (PostRequest):'
+
+const url = 'https://course-api.com/axios-tutorial-post'
 
 const PostRequest = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log(name, email);
-  };
+    e.preventDefault()
+    console.log(f, 'email →', email)
+    console.log(f, 'name →', name)
 
+    try {
+      const resp = await axios.post(url, { name: name, email: email })
+      console.log(f, 'resp →', resp)
+    } catch (error) {
+      console.log(f, 'error →', error)
+    }
+  }
   return (
     <section>
       <h2 className='text-center'>post request</h2>
-      <form className='form' onSubmit={handleSubmit}>
+      <form
+        className='form'
+        onSubmit={handleSubmit}
+      >
         <div className='form-row'>
-          <label htmlFor='name' className='form-label'>
+          <label
+            htmlFor='name'
+            className='form-label'
+          >
             name
           </label>
           <input
@@ -28,7 +44,10 @@ const PostRequest = () => {
           />
         </div>
         <div className='form-row'>
-          <label htmlFor='email' className='form-label'>
+          <label
+            htmlFor='email'
+            className='form-label'
+          >
             email
           </label>
           <input
@@ -39,11 +58,14 @@ const PostRequest = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <button type='submit' className='btn btn-block'>
+        <button
+          type='submit'
+          className='btn btn-block'
+        >
           login
         </button>
       </form>
     </section>
-  );
-};
-export default PostRequest;
+  )
+}
+export default PostRequest
