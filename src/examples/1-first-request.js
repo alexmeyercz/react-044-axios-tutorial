@@ -7,8 +7,8 @@ const f = '⇒ 1-first-request.js:'
 const url = 'https://course-api.com/react-store-products'
 
 const FirstRequest = () => {
-  const [axData, setAxData] = useState(null)
-  const [naData, setNaData] = useState(null)
+  const [axData, setAxData] = useState([])
+  const [naData, setNaData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
 
