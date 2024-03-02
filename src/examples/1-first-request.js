@@ -63,18 +63,28 @@ const FirstRequest = () => {
   return (
     <>
       <div>
-        <h2>Axios Data</h2>
-        {/* <ul>
-          {axData.map((item, index) => {
-            return <li key={index}>{item.name}</li>
-          })}
-        </ul> */}
-        <h2>Native Data</h2>
-        <ul>
-          {naData.map((item, index) => {
-            return <li key={index}>{item.name}</li>
-          })}
-        </ul>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <h2>Axios Data</h2>
+                <ul>
+                  {axData.map((item, index) => {
+                    return <li key={index}>{item.name}</li>
+                  })}
+                </ul>
+              </td>
+              <td>
+                <h2>Native Data</h2>
+                <ul>
+                  {naData.map((item, index) => {
+                    return <li key={index}>{item.name}</li>
+                  })}
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </>
   )

@@ -4,6 +4,10 @@
 npm start
 ```
 
+# Switch projects
+
+In the [App.js](./src/App.js) change the `<Setup/> to <Setup1>, <Setup2/> and so on.
+
 # Axios Tutorial
 
 #### Docs

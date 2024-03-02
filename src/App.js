@@ -6,7 +6,7 @@ function App() {
   return (
     <main>
       <Title />
-      <Setup1 />
+      <Setup />
     </main>
   )
 }
