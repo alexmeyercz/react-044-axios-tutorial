@@ -1,3 +1,4 @@
+// Global instance
 import axios from 'axios'
 
 // Expect data in SON format when it talks to other servers using Axios.
